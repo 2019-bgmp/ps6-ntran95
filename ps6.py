@@ -6,7 +6,7 @@ list_of_physical_contig=[]
 list_of_coverge_in_blue = []
 contigs_n50=[]
 number_of_contigs=0
-f = "/Users/GioiTran/Documents/shell/ps6-ntran95/test_contig.fa"
+f = "/Users/GioiTran/Documents/shell/ps6-ntran95/contigs.fa"
 with open(f, "r") as fh:
     i=1
     for line in fh:
@@ -43,6 +43,9 @@ with open(f, "r") as fh:
             header_counter +=1
             number_of_contigs+=1
 
+'''  Adjust the k-mer length to represent the physical length. Calculate the number of
+contigs, the maximum contig length, the mean contig length, and the total length of the
+genome assembly across the contigs. Calculate the mean depth of coverage for the   '''
 
 print("The list of physical contig is:", list_of_physical_contig)
 print("The maximum length of the contigs is:", list_of_physical_contig[-1])
@@ -56,9 +59,8 @@ print("The mean depth of coverage for the contigs is:", coverage_depth)
 
 print("Number of contigs is:" ,number_of_contigs)
 
-
+''' Calculate the N50 value of your assembly, use list contigs_n50  '''
 print(contigs_n50)
-#calculate the N50, use list contigs_n50
 total = 0
 for contigs in contigs_n50:
 
@@ -69,4 +71,23 @@ for contigs in contigs_n50:
         N50=contigs
         break
 print("The N50 is:", contigs)
-print(total)
+
+'''  Calculate the distribution of contig lengths and bucket the contig lengths into groups of
+100bp. So, all contigs with lengths between 0 and 99 would be in the 0 bucket, those
+with lengths between 100 and 199 would be in the 100 bucket, etc.  '''
+
+bucket_dict={}
+
+for values in range(0, 50000, 100):
+    bucket_dict.setdefault(values, 0)
+
+for x in list_of_physical_contig:
+    if (x//100)*100 in list_of_physical_contig:
+        bucket_dict[(x//100)]+=1
+
+print(bucket_dict)
+
+''' Print out the distribution. '''
+print("# Contig length" +"\t"+ "Number of contigs in this category")
+for keys in sorted(bucket_dict):
+     print("%d%s%d" %(keys, "\t", bucket_dict[keys]))
