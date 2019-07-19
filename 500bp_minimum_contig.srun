@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+#SBATCH --partition=bgmp        ### Partition (like a queue in PBS)
+#SBATCH --job-name=500bp_minimum_contig    ### Job Name
+#SBATCH --output=500bp_minimum_contig.out         ### File in which to store job output
+#SBATCH --error=500bp_minimum_contig.err          ### File in which to store job error messages
+#SBATCH --time=0-00:60:00       ### Wall clock time limit in Days-HH:MM:SS
+#SBATCH --nodes=1               ### Number of nodes needed for the job
+#SBATCH --ntasks-per-node=1     ### Number of tasks to be launched per Node
+#SBATCH --account=bgmp      ### Account used for job submission
+#SBATCH --cpus-per-task=7
+
+
+conda deactivate
+conda deactivate
+conda deactivate
+conda deactivate
+conda activate bgmp_py3
+
+dir49="/home/ntran2/bgmp/Bi621/PS6/49_kmer_size_velvet"
+
+/usr/bin/time -v velvetg $dir49 -cov_cutoff auto -min_contig_lgth 500
+cd /projects/bgmp/ntran2/Bi621/PS6/49_kmer_size_velvet
+mkdir 500bp_minimum_contig
+mv Graph PreGraph stats.txt LastGraph contigs.fa 500bp_minimum_contig

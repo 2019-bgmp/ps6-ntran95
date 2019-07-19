@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+
+#SBATCH --partition=bgmp        ### Partition (like a queue in PBS)
+#SBATCH --job-name=velvet_h      ### Job Name
+#SBATCH --output=velvet_h.out         ### File in which to store job output
+#SBATCH --error=velvet_h.err          ### File in which to store job error messages
+#SBATCH --time=0-00:60:00       ### Wall clock time limit in Days-HH:MM:SS
+#SBATCH --nodes=1               ### Number of nodes needed for the job
+#SBATCH --ntasks-per-node=1     ### Number of tasks to be launched per Node
+#SBATCH --account=bgmp      ### Account used for job submission
+#SBATCH --cpus-per-task=7
+
+conda deactivate
+conda deactivate
+conda deactivate
+conda deactivate
+conda activate bgmp_py3
+
+dir31="/home/ntran2/bgmp/Bi621/PS6/31_kmer_size_velvet"
+dir41="/home/ntran2/bgmp/Bi621/PS6/41_kmer_size_velvet"
+dir49="/home/ntran2/bgmp/Bi621/PS6/49_kmer_size_velvet"
+
+file1="/home/ntran2/bgmp/Bi621/PS6/800_3_PE5_interleaved.fq_1"
+file2="/home/ntran2/bgmp/Bi621/PS6/800_3_PE5_interleaved.fq_2"
+file3="/home/ntran2/bgmp/Bi621/PS6/800_3_PE5_interleaved.fq.unmatched"
+
+/usr/bin/time -v velveth $dir31 31 -separate -fastq -shortPaired $file1 $file2 -short $file3
+/usr/bin/time -v velveth $dir41 41 -separate -fastq -shortPaired $file1 $file2 -short $file3
+/usr/bin/time -v velveth $dir49 49 -separate -fastq -shortPaired $file1 $file2 -short $file3

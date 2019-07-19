@@ -1,12 +1,21 @@
 #!/usr/bin/env python
 import re
+import argparse
 #importing reg ex to look through the header pattern
+
+def get_arguements():
+    parser = argparse.ArgumentParser(description="reading in different files")
+    parser.add_argument("-f", "--file_name", help="this argument specifies the filename", type =str, required=True)
+    return parser.parse_args()
+
+args=get_arguements()
+f=args.file_name
 
 list_of_physical_contig=[]
 list_of_coverge_in_blue = []
 contigs_n50=[]
 number_of_contigs=0
-f = "/Users/GioiTran/Documents/shell/ps6-ntran95/contigs.fa"
+#f = "/Users/GioiTran/Documents/shell/ps6-ntran95/contigs.fa"
 with open(f, "r") as fh:
     i=1
     for line in fh:
@@ -47,7 +56,7 @@ with open(f, "r") as fh:
 contigs, the maximum contig length, the mean contig length, and the total length of the
 genome assembly across the contigs. Calculate the mean depth of coverage for the   '''
 
-print("The list of physical contig is:", list_of_physical_contig)
+#print("The list of physical contig is:", list_of_physical_contig)
 print("The maximum length of the contigs is:", list_of_physical_contig[-1])
 print("The mean contig length is:", sum(list_of_physical_contig)/ number_of_contigs)
 genome_length= sum(list_of_physical_contig)
@@ -60,7 +69,7 @@ print("The mean depth of coverage for the contigs is:", coverage_depth)
 print("Number of contigs is:" ,number_of_contigs)
 
 ''' Calculate the N50 value of your assembly, use list contigs_n50  '''
-print(contigs_n50)
+#print(contigs_n50)
 total = 0
 for contigs in contigs_n50:
 
@@ -82,10 +91,10 @@ for values in range(0, 50000, 100):
     bucket_dict.setdefault(values, 0)
 
 for x in list_of_physical_contig:
-    if (x//100)*100 in list_of_physical_contig:
-        bucket_dict[(x//100)]+=1
+    if (x//100)*100 in bucket_dict:
+        bucket_dict[(x//100)*100]+=1
 
-print(bucket_dict)
+#print(bucket_dict)
 
 ''' Print out the distribution. '''
 print("# Contig length" +"\t"+ "Number of contigs in this category")

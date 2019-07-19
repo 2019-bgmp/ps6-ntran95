@@ -1,0 +1,107 @@
+[0.000000] Reading roadmap file /home/ntran2/bgmp/Bi621/PS6/49_kmer_size_velvet/Roadmaps
+[2.363961] 2567781 roadmaps read
+[2.365086] Creating insertion markers
+[2.634048] Ordering insertion markers
+[2.879084] Counting preNodes
+[3.104516] 1228385 preNodes counted, creating them now
+[5.147785] Sequence 1000000 / 2567781
+[6.950057] Sequence 2000000 / 2567781
+[7.884266] Adjusting marker info...
+[8.146266] Connecting preNodes
+[8.481409] Connecting 2000000 / 2567781
+[8.853988] Connecting 1000000 / 2567781
+[9.068377] Cleaning up memory
+[9.068882] Done creating preGraph
+[9.068887] Concatenation...
+[9.311272] Renumbering preNodes
+[9.311275] Initial preNode count 1228385
+[9.321199] Destroyed 1108466 preNodes
+[9.321201] Concatenation over!
+[9.321201] Clipping short tips off preGraph
+[9.355156] Concatenation...
+[9.408331] Renumbering preNodes
+[9.408333] Initial preNode count 119919
+[9.409641] Destroyed 104427 preNodes
+[9.409642] Concatenation over!
+[9.409643] 62934 tips cut off
+[9.409643] 15492 nodes left
+[9.411352] Writing into pregraph file /home/ntran2/bgmp/Bi621/PS6/49_kmer_size_velvet/PreGraph...
+[9.496019] Reading read set file /home/ntran2/bgmp/Bi621/PS6/49_kmer_size_velvet/Sequences;
+[9.830066] 2567781 sequences found
+[11.421675] Done
+[13.047269] Reading pre-graph file /home/ntran2/bgmp/Bi621/PS6/49_kmer_size_velvet/PreGraph
+[13.047310] Graph has 15492 nodes and 2567781 sequences
+[13.093960] Scanning pre-graph file /home/ntran2/bgmp/Bi621/PS6/49_kmer_size_velvet/PreGraph for k-mers
+[13.135882] 1644384 kmers found
+[13.235474] Sorting kmer occurence table ... 
+[13.804149] Sorting done.
+[13.804151] Computing acceleration table... 
+[13.833269] Computing offsets... 
+[13.843955] Ghost Threading through reads 0 / 2567781
+[13.845105] Ghost Threading through reads 2000000 / 2567781
+[16.160976] Ghost Threading through reads 1000000 / 2567781
+[16.979045]  === Ghost-Threaded in 3.135201 s
+[16.979079] Threading through reads 0 / 2567781
+[18.085030] Threading through reads 2000000 / 2567781
+[19.573567] Threading through reads 1000000 / 2567781
+[20.478576]  === Threaded in 3.499523 s
+[20.487470] Correcting graph with cutoff 0.200000
+[20.488158] Determining eligible starting points
+[20.498408] Done listing starting nodes
+[20.498410] Initializing todo lists
+[20.499667] Done with initilization
+[20.499668] Activating arc lookup table
+[20.500287] Done activating arc lookup table
+[20.566792] 10000 / 15492 nodes visited
+[20.577990] Concatenation...
+[20.578418] Renumbering nodes
+[20.578419] Initial node count 15492
+[20.578568] Removed 5298 null nodes
+[20.578569] Concatenation over!
+[20.578569] Clipping short tips off graph, drastic
+[20.581705] Concatenation...
+[20.583329] Renumbering nodes
+[20.583330] Initial node count 10194
+[20.583437] Removed 4276 null nodes
+[20.583438] Concatenation over!
+[20.583438] 5918 nodes left
+[20.584015] Writing into graph file /home/ntran2/bgmp/Bi621/PS6/49_kmer_size_velvet/Graph...
+[20.690750] Measuring median coverage depth...
+[20.691946] Median coverage depth = 33.772894
+[20.691975] Removing contigs with coverage < 16.886447...
+[20.692716] Concatenation...
+[20.696728] Renumbering nodes
+[20.696729] Initial node count 5918
+[20.696777] Removed 3645 null nodes
+[20.696778] Concatenation over!
+[20.696807] Concatenation...
+[20.696867] Renumbering nodes
+[20.696867] Initial node count 2273
+[20.696869] Removed 0 null nodes
+[20.696869] Concatenation over!
+[20.696873] Clipping short tips off graph, drastic
+[20.697014] Concatenation...
+[20.697138] Renumbering nodes
+[20.697139] Initial node count 2273
+[20.697162] Removed 91 null nodes
+[20.697162] Concatenation over!
+[20.697162] 2182 nodes left
+[20.697163] WARNING: NO EXPECTED COVERAGE PROVIDED
+[20.697163] Velvet will be unable to resolve any repeats
+[20.697163] See manual for instructions on how to set the expected coverage parameter
+[20.697164] Concatenation...
+[20.697208] Renumbering nodes
+[20.697209] Initial node count 2182
+[20.697210] Removed 0 null nodes
+[20.697210] Concatenation over!
+[20.697211] Removing reference contigs with coverage < 16.886447...
+[20.697259] Concatenation...
+[20.697297] Renumbering nodes
+[20.697297] Initial node count 2182
+[20.697299] Removed 0 null nodes
+[20.697299] Concatenation over!
+[20.705707] Writing contigs into /home/ntran2/bgmp/Bi621/PS6/49_kmer_size_velvet/contigs.fa...
+[20.755914] Writing into stats file /home/ntran2/bgmp/Bi621/PS6/49_kmer_size_velvet/stats.txt...
+[20.762040] Writing into graph file /home/ntran2/bgmp/Bi621/PS6/49_kmer_size_velvet/LastGraph...
+[20.841462] Estimated Coverage cutoff = 16.886447
+Final graph has 2182 nodes and n50 of 1779, max 10419, total 1142681, using 0/2567781 reads

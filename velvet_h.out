@@ -1,0 +1,60 @@
+[0.000000] Reading FastQ file /home/ntran2/bgmp/Bi621/PS6/800_3_PE5_interleaved.fq_1;
+[0.000458] Reading FastQ file /home/ntran2/bgmp/Bi621/PS6/800_3_PE5_interleaved.fq_2;
+[3.141800] 1717978 sequences found in total in the paired sequence files
+[3.141802] Done
+[3.142453] Reading FastQ file /home/ntran2/bgmp/Bi621/PS6/800_3_PE5_interleaved.fq.unmatched;
+[4.612792] 849803 sequences found
+[4.612794] Done
+[4.622718] Reading read set file /home/ntran2/bgmp/Bi621/PS6/31_kmer_size_velvet/Sequences;
+[4.998292] 2567781 sequences found
+[6.710673] Done
+[6.710676] 2567781 sequences in total.
+[6.712857] Writing into roadmap file /home/ntran2/bgmp/Bi621/PS6/31_kmer_size_velvet/Roadmaps...
+[8.429093] Inputting sequences...
+[8.433517] Inputting sequence 0 / 2567781
+[11.696911] Inputting sequence 2000000 / 2567781
+[13.146425] Inputting sequence 1000000 / 2567781
+[14.253246]  === Sequences loaded in 5.889556 s
+[14.254007] Done inputting sequences
+[14.254011] Destroying splay table
+[14.274548] Splay table destroyed
+[0.000000] Reading FastQ file /home/ntran2/bgmp/Bi621/PS6/800_3_PE5_interleaved.fq_1;
+[0.000050] Reading FastQ file /home/ntran2/bgmp/Bi621/PS6/800_3_PE5_interleaved.fq_2;
+[3.072315] 1717978 sequences found in total in the paired sequence files
+[3.072317] Done
+[3.072401] Reading FastQ file /home/ntran2/bgmp/Bi621/PS6/800_3_PE5_interleaved.fq.unmatched;
+[4.403173] 849803 sequences found
+[4.403175] Done
+[4.411282] Reading read set file /home/ntran2/bgmp/Bi621/PS6/41_kmer_size_velvet/Sequences;
+[4.766826] 2567781 sequences found
+[6.460777] Done
+[6.460780] 2567781 sequences in total.
+[6.462607] Writing into roadmap file /home/ntran2/bgmp/Bi621/PS6/41_kmer_size_velvet/Roadmaps...
+[8.175328] Inputting sequences...
+[8.175554] Inputting sequence 0 / 2567781
+[10.695142] Inputting sequence 2000000 / 2567781
+[15.337685] Inputting sequence 1000000 / 2567781
+[16.228769]  === Sequences loaded in 8.118262 s
+[16.229749] Done inputting sequences
+[16.229754] Destroying splay table
+[16.261830] Splay table destroyed
+[0.000001] Reading FastQ file /home/ntran2/bgmp/Bi621/PS6/800_3_PE5_interleaved.fq_1;
+[0.000050] Reading FastQ file /home/ntran2/bgmp/Bi621/PS6/800_3_PE5_interleaved.fq_2;
+[2.824558] 1717978 sequences found in total in the paired sequence files
+[2.824560] Done
+[2.824646] Reading FastQ file /home/ntran2/bgmp/Bi621/PS6/800_3_PE5_interleaved.fq.unmatched;
+[4.122264] 849803 sequences found
+[4.122266] Done
+[4.131105] Reading read set file /home/ntran2/bgmp/Bi621/PS6/49_kmer_size_velvet/Sequences;
+[4.475301] 2567781 sequences found
+[6.117034] Done
+[6.117038] 2567781 sequences in total.
+[6.119529] Writing into roadmap file /home/ntran2/bgmp/Bi621/PS6/49_kmer_size_velvet/Roadmaps...
+[7.793041] Inputting sequences...
+[7.797463] Inputting sequence 0 / 2567781
+[10.904325] Inputting sequence 1000000 / 2567781
+[11.394691] Inputting sequence 2000000 / 2567781
+[12.452063]  === Sequences loaded in 4.723622 s
+[12.452803] Done inputting sequences
+[12.452805] Destroying splay table
+[12.466869] Splay table destroyed
