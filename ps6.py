@@ -11,8 +11,11 @@ def get_arguements():
 args=get_arguements()
 f=args.file_name
 
+#holds list of calculated physical contigs length (kmer_length +48) which we will use to calculate max length and genome length
 list_of_physical_contig=[]
+#hold coverage that were represented in the FASTA ID
 list_of_coverge_in_blue = []
+#holds same values as physical contigs length, however we are going to refer to this list to calculate N50
 contigs_n50=[]
 number_of_contigs=0
 #f = "/Users/GioiTran/Documents/shell/ps6-ntran95/contigs.fa"
