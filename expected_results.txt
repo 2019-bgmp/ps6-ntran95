@@ -1,0 +1,36 @@
+I created a test file: Unit_test.fa that that held 6 records.
+The file Unit_test.fa contains the following FASTA ID records: 
+>NODE_1_length_1154_cov_536.720947
+>NODE_2_length_822_cov_81.681267
+>NODE_93_length_237_cov_146.578064
+>NODE_110_length_553_cov_59.786617
+>NODE_136_length_2172_cov_70.279007
+>NODE_141_length_397_cov_1950.808594
+
+
+The list of expected physical contig length are as followed:
+[285, 445, 601, 870, 1202, 2220]
+
+I worked with Michelle to calculate the expected statistic assembly:
+(She has a Unit_test.fa of 5 records while I had 6 records to ensure our calculations were correct with different # of records)
+number of contigs to be 6
+the maximum number to be 2220
+the length of the contigs altogether to be 5623= [285+ 445+ 601+ 870+ 1202+ 2220]
+the n50 to be within the 1202 contig (drew it out)
+the coverage for the contigs are
+[536.720947, 81.681267, 146.578064, 59.786617, 70.279007, 1950.808594]
+the mean of the coverage should be ~384.86
+
+
+When I ran the script with my Unit_test.fa file, I got the following result:
+
+[ntran2@talapas-ln1 ps6-ntran95]$ ./ps6.py -f test_contig.fa 
+('The list of physical contig is:', [285, 445, 601, 870, 1202, 2220])
+('The maximum length of the contigs is:', 2220)
+('The mean contig length is:', 937)
+('The total length of the genome assembly across the contigs is:', 5623)
+('The mean depth of coverage for the contigs is:', 474.30908266666665)
+('Number of contigs is:', 6)
+('The N50 is:', 1202)
+
+In conclusion, my mean contig coverage was off slightly. 
